@@ -1,30 +1,40 @@
 package org.example;
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 
 public class Test1 {
 
-    @Before
-    public void before() {
-        System.out.println("Before Test1");
-    }
+//    @Before
+//    public void before() {
+//        System.out.println("Before Test1");
+//    }
 
     @Test
-    public void test() {
-        boolean testEquation = true;
-        Assert.assertTrue(testEquation);
-        //System.out.println(testEquation);
-        testEquation = false;
-        Assert.assertFalse(testEquation);
-        //System.out.println(testEquation);
+    public void method1(){
+        boolean value = false;
+        Assert.assertFalse(value);
+        System.out.println("@Test annotation");
     }
 
     @After
-    public void after() {
-        System.out.println("After Test1 Done");
+    public void m2(){
+        System.out.println("@After annotation");
     }
+    @Before
+    public void m3(){
+        System.out.println("@Before annotation");
+    }
+    @Ignore
+    public void m4(){
+        System.out.println("@Ignore annotation");
+    }
+
+
+//    @After
+//    public void after() {
+//        System.out.println("After Test1 Done");
+//    }
+
+
 }
